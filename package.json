@@ -1,6 +1,6 @@
 {
   "name": "extension-helper",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Promisified, cross-browser wrappers and helpers for extension APIs.",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "babel src --out-dir lib",
     "docs": "documentation serve --watch ./src/index.js",
     "readme": "documentation readme ./src/index.js --section=API",
-    "publish": "npm run readme && npm run build"
+    "prepublish": "npm run readme && npm run build"
   },
   "license": "MIT",
   "devDependencies": {

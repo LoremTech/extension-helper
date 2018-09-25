@@ -1,6 +1,6 @@
 {
-  "name": "extension-helpers",
-  "version": "2.0.1",
+  "name": "extension-helper",
+  "version": "2.0.2",
   "description": "Promisified, cross-browser wrappers and helpers for extension APIs.",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,6 @@
     "readme": "documentation readme ./src/index.js --section=API",
     "publish": "npm run readme && npm run build"
   },
-  "author": "Zachary Caceres (@zachcaceres | zachcaceres.com)",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",

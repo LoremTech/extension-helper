@@ -3,11 +3,11 @@
 > Work in progress, PRS welcome
 
 ```js
-import extensionHelpers from 'extension-helpers';
+import extensionHelpers from 'extension-helper';
 
 // or
 
-const extensionHelpers = require('extension-helpers').default;
+const extensionHelpers = require('extension-helper').default;
 ```
 
 Promisified, cross-browser wrappers and helpers for extension APIs.
@@ -26,73 +26,120 @@ Note: Many APIs are not supported in Edge. Check their documentation.
 
 -   [wallpaper](#wallpaper)
     -   [set](#set)
+        -   [Parameters](#parameters)
 -   [alarms](#alarms)
     -   [create](#create)
+        -   [Parameters](#parameters-1)
     -   [get](#get)
+        -   [Parameters](#parameters-2)
     -   [getAll](#getall)
     -   [clear](#clear)
+        -   [Parameters](#parameters-3)
     -   [clearAll](#clearall)
 -   [history](#history)
     -   [search](#search)
+        -   [Parameters](#parameters-4)
     -   [getVisits](#getvisits)
+        -   [Parameters](#parameters-5)
     -   [addUrl](#addurl)
+        -   [Parameters](#parameters-6)
     -   [deleteUrl](#deleteurl)
+        -   [Parameters](#parameters-7)
     -   [deleteRange](#deleterange)
+        -   [Parameters](#parameters-8)
     -   [deleteAll](#deleteall)
 -   [extension](#extension)
     -   [self](#self)
     -   [permissionWarningsById](#permissionwarningsbyid)
+        -   [Parameters](#parameters-9)
     -   [permissionWarningsByManifest](#permissionwarningsbymanifest)
+        -   [Parameters](#parameters-10)
     -   [enable](#enable)
+        -   [Parameters](#parameters-11)
     -   [disable](#disable)
+        -   [Parameters](#parameters-12)
     -   [getAll](#getall-1)
     -   [get](#get-1)
+        -   [Parameters](#parameters-13)
 -   [localStorage](#localstorage)
     -   [set](#set-1)
+        -   [Parameters](#parameters-14)
     -   [get](#get-2)
+        -   [Parameters](#parameters-15)
 -   [message](#message)
     -   [tab](#tab)
+        -   [Parameters](#parameters-16)
     -   [allTabs](#alltabs)
+        -   [Parameters](#parameters-17)
     -   [activeTabs](#activetabs)
+        -   [Parameters](#parameters-18)
     -   [manyTabs](#manytabs)
+        -   [Parameters](#parameters-19)
     -   [activeTab](#activetab)
+        -   [Parameters](#parameters-20)
 -   [tabs](#tabs)
     -   [focus](#focus)
+        -   [Parameters](#parameters-21)
     -   [close](#close)
+        -   [Parameters](#parameters-22)
     -   [getActive](#getactive)
     -   [executeOnActive](#executeonactive)
+        -   [Parameters](#parameters-23)
     -   [open](#open)
+        -   [Parameters](#parameters-24)
     -   [getAllActive](#getallactive)
     -   [getAll](#getall-2)
     -   [executeOnAll](#executeonall)
+        -   [Parameters](#parameters-25)
     -   [executeOnAllActive](#executeonallactive)
+        -   [Parameters](#parameters-26)
     -   [getCurrent](#getcurrent)
     -   [reload](#reload)
+        -   [Parameters](#parameters-27)
 -   [windows](#windows)
     -   [getById](#getbyid)
+        -   [Parameters](#parameters-28)
     -   [getCurrent](#getcurrent-1)
+        -   [Parameters](#parameters-29)
     -   [getLastFocused](#getlastfocused)
+        -   [Parameters](#parameters-30)
     -   [getAll](#getall-3)
+        -   [Parameters](#parameters-31)
     -   [create](#create-1)
+        -   [Parameters](#parameters-32)
     -   [update](#update)
+        -   [Parameters](#parameters-33)
     -   [focus](#focus-1)
+        -   [Parameters](#parameters-34)
     -   [drawAttention](#drawattention)
+        -   [Parameters](#parameters-35)
 -   [notifications](#notifications)
     -   [create](#create-2)
+        -   [Parameters](#parameters-36)
     -   [update](#update-1)
+        -   [Parameters](#parameters-37)
     -   [clear](#clear-1)
+        -   [Parameters](#parameters-38)
     -   [getAll](#getall-4)
 -   [runtime](#runtime)
     -   [sendMessage](#sendmessage)
+        -   [Parameters](#parameters-39)
 -   [cookie](#cookie)
     -   [get](#get-3)
+        -   [Parameters](#parameters-40)
     -   [set](#set-2)
+        -   [Parameters](#parameters-41)
     -   [getAll](#getall-5)
+        -   [Parameters](#parameters-42)
     -   [remove](#remove)
+        -   [Parameters](#parameters-43)
     -   [getAllCookieStores](#getallcookiestores)
 -   [BadgeManager](#badgemanager)
+    -   [Parameters](#parameters-44)
     -   [add](#add)
+        -   [Parameters](#parameters-45)
     -   [subtract](#subtract)
+        -   [Parameters](#parameters-46)
     -   [clear](#clear-2)
 -   [index](#index)
 
@@ -106,7 +153,7 @@ Manage wallpapers
 
 CHROME ONLY. Sets wallpaper to an image (url) or Array buffer (data).
 
-**Parameters**
+##### Parameters
 
 -   `filename` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** File name of saved wallpaper
 -   `layout` **WallpaperLayout** A WallpaperLayout Enum value
@@ -122,7 +169,7 @@ Schedule code to run at a specific time.
 
 Creates a new alarm.
 
-**Parameters**
+##### Parameters
 
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Optional name to identify alarm.
 -   `optionalParams` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Object of shape { when: {Number}, delayInMinutes: {Number}, periodInMinutes: {Number} }. Describes when the alarm should fire. The initial time must be specified by either when or delayInMinutes (but not both). If periodInMinutes is set, the alarm will repeat every periodInMinutes minutes after the initial event. If neither when or delayInMinutes is set for a repeating alarm, periodInMinutes is used as the default for delayInMinutes.
@@ -133,7 +180,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Gets an alarm, given its name.
 
-**Parameters**
+##### Parameters
 
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Optional. The name of the alarm to get. Defaults to the empty string.
 
@@ -149,7 +196,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Clears the alarm with the given name.
 
-**Parameters**
+##### Parameters
 
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Name of the alarm to cancel. Default is empty string.
 
@@ -171,7 +218,7 @@ Search and manage browser history
 
 Search the browser history for last visit time of each page matching the query
 
-**Parameters**
+##### Parameters
 
 -   `text` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** A free-text query to the history service. Leave empty to retrieve all pages.
 -   `optionalStartTime` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Double. Limit results to those visited after this date, represented in milliseconds since the epoch. If not specified, this defaults to 24 hours in the past.
@@ -184,7 +231,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Gets information about visits to a url
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Must be fully qualified url including protocol
 
@@ -195,7 +242,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 Chrome: Adds a URL to the history at the current time with a transition type of "link".
 Firefox: Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the TransitionType is recorded as "link".
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The URL to add
 -   `optionalParams` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Firefox only. Object with shape { title: {String}, transition: {TransitionType}, visitTime: {Number | String | Object} }. All optional.
@@ -206,7 +253,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Removes all visits to the given URL from the browser history.
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The URL whose visits should be removed.
 
@@ -216,7 +263,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Removes all items within the specified date range from the history. Pages will not be removed from the history unless all visits fall within the range.
 
-**Parameters**
+##### Parameters
 
 -   `startTime` **([Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date))** Items added to history after this date, represented in milliseconds since the epoch.
 -   `endTime` **([Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date))** Items added to history before this date, represented in milliseconds since the epoch.
@@ -243,7 +290,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get a list of permission warnings for the given extension id
 
-**Parameters**
+##### Parameters
 
 -   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The browser-assigned id of the extension
 
@@ -253,7 +300,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get a list of permission warnings for the given extension manifest string
 
-**Parameters**
+##### Parameters
 
 -   `manifestStr` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Extension manifest JSON string.
 
@@ -263,7 +310,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Enable (activate) a browser extension
 
-**Parameters**
+##### Parameters
 
 -   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The browser-assigned id of the extension
 
@@ -273,7 +320,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Disable (deactivate) a browser extension
 
-**Parameters**
+##### Parameters
 
 -   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The Browser-assigned id of the extension
 
@@ -289,7 +336,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get a browser by extension id
 
-**Parameters**
+##### Parameters
 
 -   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Browser-assigned extension id
 
@@ -303,7 +350,7 @@ Manage the local storage of your browser extension
 
 Set a value at a given key in the extension's local storage
 
-**Parameters**
+##### Parameters
 
 -   `key` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Key for the set value
 -   `value` **Any** Value to serialize to local storage. Objects and functions serialized to {}. Arrays, Regex, and primitives serialize correctly.
@@ -314,7 +361,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get the value for a given key in local storage
 
-**Parameters**
+##### Parameters
 
 -   `key` **([String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)> | null)** Single key to get, array of keys to get, or null to get entire contents
 
@@ -328,7 +375,7 @@ Send messages to tabs
 
 Send a message directly to tab by id
 
-**Parameters**
+##### Parameters
 
 -   `tabId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Browser-assigned id of target tab
 -   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
@@ -339,7 +386,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Sends a message to all tabs in any window
 
-**Parameters**
+##### Parameters
 
 -   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
@@ -349,7 +396,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Sends a message to tabs that are considered 'active' (focused) for all open browser windows
 
-**Parameters**
+##### Parameters
 
 -   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
@@ -359,7 +406,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Send a message to an array of tabs
 
-**Parameters**
+##### Parameters
 
 -   `tabArr` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>** Array of Tab objects to send message to
 -   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
@@ -370,7 +417,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Send message to active (focused) tab in the current window.
 
-**Parameters**
+##### Parameters
 
 -   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
@@ -384,7 +431,7 @@ Open, close, focus, blur and manage tabs.
 
 Forces browser focus on given tab
 
-**Parameters**
+##### Parameters
 
 -   `tabId` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)>)** id of chrome tab
 
@@ -394,7 +441,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Closes a tab by tab id
 
-**Parameters**
+##### Parameters
 
 -   `tabIds` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** an array
 
@@ -410,7 +457,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Execute a file or code on a given tab
 
-**Parameters**
+##### Parameters
 
 -   `toInject` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** file name or raw code to execute
 -   `typeToInject` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** valid params are "code" or "file"
@@ -421,7 +468,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Open a new tab optionally blurred or focused, and return the new tab's id.
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the url you want the new tab to show
 -   `active` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** should browser focus on the new tab
@@ -444,7 +491,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Execute raw js or a script by filename on all tabs
 
-**Parameters**
+##### Parameters
 
 -   `toInject` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** file name or raw code to execute
 -   `typeToInject` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** valid params are "code" or "file"
@@ -455,7 +502,7 @@ Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Gl
 
 Executes a file or inline code as a string on all the active tabs of all windows.
 
-**Parameters**
+##### Parameters
 
 -   `toInject` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** file name or raw code to execute
 -   `typeToInject` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** valid params are "code" or "file"
@@ -472,7 +519,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Reloads a tab by id. Optionally bypasses cache.
 
-**Parameters**
+##### Parameters
 
 -   `tabId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Id of tab to reload
 -   `bypassCache` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Bypass local web cache
@@ -490,7 +537,7 @@ Manage browser windows
 
 Get a window by id
 
-**Parameters**
+##### Parameters
 
 -   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window
 -   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
@@ -502,7 +549,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get the current browser window
 
-**Parameters**
+##### Parameters
 
 -   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
 -   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
@@ -513,7 +560,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get the most recently focused window. Usually the window 'on top'.
 
-**Parameters**
+##### Parameters
 
 -   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
 -   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
@@ -524,7 +571,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get all open windows
 
-**Parameters**
+##### Parameters
 
 -   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
 -   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
@@ -537,7 +584,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Opens a new browser window with optional parameters.
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Fully qualified url to open in new window
 -   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Optional parameters like incognito, focused, positioning, and tabid. See Chrome and Firefox docs for complete list.
@@ -550,7 +597,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Update a Window's state
 
-**Parameters**
+##### Parameters
 
 -   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to update
 -   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional parameters like height, width, and state.
@@ -561,7 +608,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Focus on a given window
 
-**Parameters**
+##### Parameters
 
 -   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to focus
 
@@ -571,7 +618,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Draw attention to a given window
 
-**Parameters**
+##### Parameters
 
 -   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to focus
 
@@ -587,7 +634,7 @@ Send and manage browser notifications
 
 Create and display a new notification
 
-**Parameters**
+##### Parameters
 
 -   `notificationId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** optional id to assign notification. If empty will be automatically generated
 -   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** NotificationsOptions object
@@ -600,7 +647,7 @@ Returns **Prromise&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript
 
 Update existing notification
 
-**Parameters**
+##### Parameters
 
 -   `notificationId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** id of notification to update
 -   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** NotificationOptions object
@@ -613,7 +660,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Clear specified notification
 
-**Parameters**
+##### Parameters
 
 -   `notificationId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** id of notification to clear
 
@@ -633,7 +680,7 @@ Manage runtime tasks like messaging extensions
 
 Sends a message to an extension identified by its id
 
-**Parameters**
+##### Parameters
 
 -   `extensionId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** optional extension id
 -   `msg` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Any JSON-ifiable object
@@ -651,7 +698,7 @@ Manage cookies in the browser
 
 Get a cookie by name for a given url.
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** URL of site to get cookie from
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Name of cookie to get
@@ -665,7 +712,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Set a cookie by name for a given url.
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** URL of site to get cookie from
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Name of cookie to get
@@ -678,7 +725,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get all cookies by name for a given url
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Optional url to get cookies from
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Optional name of cookie to get from url
@@ -690,7 +737,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Remove a cookie by name for a given url
 
-**Parameters**
+##### Parameters
 
 -   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** URL of site to remove cookie from
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Name of cookie to remove
@@ -709,7 +756,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 A BadgeManager object for controlling the badges on your extension's Browser Action toolbar icon.
 Should be used as a singleton, since it tracks the state of your extension's badges.
 
-**Parameters**
+#### Parameters
 
 -   `badgeColor` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The hex code of the color for your badge
 
@@ -717,7 +764,7 @@ Should be used as a singleton, since it tracks the state of your extension's bad
 
 Add a number to your badge's current value
 
-**Parameters**
+##### Parameters
 
 -   `num` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** The number to add to your badge
 
@@ -727,7 +774,7 @@ Returns **[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Referenc
 
 Subtract a number from your badge's current value
 
-**Parameters**
+##### Parameters
 
 -   `num` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** The number to subtract
 
@@ -743,8 +790,8 @@ Returns **[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Referenc
 
 Retrieves whether the user has enabled notifications from the app/extension
 
-## Something broken?
+## Author
 
-Go bother:
+All credit goes to:
 
 > Zach Caceres ([Twitter](https://www.twitter.com/zachcaceres) \| [GitHub](https://www.github.com/zcaceres) \| [Website](http://zachcaceres.com) )

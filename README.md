@@ -24,105 +24,105 @@ Note: Many APIs are not supported in Edge. Check their documentation.
 
 #### Table of Contents
 
--   [wallpaper](#wallpaper)
-    -   [set](#set)
-        -   [Parameters](#parameters)
--   [alarms](#alarms)
-    -   [create](#create)
-        -   [Parameters](#parameters-1)
-    -   [get](#get)
-        -   [Parameters](#parameters-2)
-    -   [getAll](#getall)
-    -   [clear](#clear)
-        -   [Parameters](#parameters-3)
-    -   [clearAll](#clearall)
--   [history](#history)
-    -   [search](#search)
-        -   [Parameters](#parameters-4)
-    -   [getVisits](#getvisits)
-        -   [Parameters](#parameters-5)
-    -   [addUrl](#addurl)
-        -   [Parameters](#parameters-6)
-    -   [deleteUrl](#deleteurl)
-        -   [Parameters](#parameters-7)
-    -   [deleteRange](#deleterange)
-        -   [Parameters](#parameters-8)
-    -   [deleteAll](#deleteall)
 -   [extension](#extension)
     -   [self](#self)
     -   [permissionWarningsById](#permissionwarningsbyid)
-        -   [Parameters](#parameters-9)
+        -   [Parameters](#parameters)
     -   [permissionWarningsByManifest](#permissionwarningsbymanifest)
-        -   [Parameters](#parameters-10)
+        -   [Parameters](#parameters-1)
     -   [enable](#enable)
-        -   [Parameters](#parameters-11)
+        -   [Parameters](#parameters-2)
     -   [disable](#disable)
-        -   [Parameters](#parameters-12)
-    -   [getAll](#getall-1)
+        -   [Parameters](#parameters-3)
+    -   [getAll](#getall)
+    -   [get](#get)
+        -   [Parameters](#parameters-4)
+-   [alarms](#alarms)
+    -   [create](#create)
+        -   [Parameters](#parameters-5)
     -   [get](#get-1)
-        -   [Parameters](#parameters-13)
--   [localStorage](#localstorage)
-    -   [set](#set-1)
-        -   [Parameters](#parameters-14)
-    -   [get](#get-2)
-        -   [Parameters](#parameters-15)
--   [message](#message)
-    -   [tab](#tab)
-        -   [Parameters](#parameters-16)
-    -   [allTabs](#alltabs)
-        -   [Parameters](#parameters-17)
-    -   [activeTabs](#activetabs)
-        -   [Parameters](#parameters-18)
-    -   [manyTabs](#manytabs)
-        -   [Parameters](#parameters-19)
-    -   [activeTab](#activetab)
-        -   [Parameters](#parameters-20)
--   [tabs](#tabs)
-    -   [focus](#focus)
-        -   [Parameters](#parameters-21)
-    -   [close](#close)
-        -   [Parameters](#parameters-22)
-    -   [getActive](#getactive)
-    -   [executeOnActive](#executeonactive)
-        -   [Parameters](#parameters-23)
-    -   [open](#open)
-        -   [Parameters](#parameters-24)
-    -   [getAllActive](#getallactive)
-    -   [getAll](#getall-2)
-    -   [executeOnAll](#executeonall)
-        -   [Parameters](#parameters-25)
-    -   [executeOnAllActive](#executeonallactive)
-        -   [Parameters](#parameters-26)
-    -   [getCurrent](#getcurrent)
-    -   [reload](#reload)
-        -   [Parameters](#parameters-27)
--   [windows](#windows)
-    -   [getById](#getbyid)
-        -   [Parameters](#parameters-28)
-    -   [getCurrent](#getcurrent-1)
-        -   [Parameters](#parameters-29)
-    -   [getLastFocused](#getlastfocused)
-        -   [Parameters](#parameters-30)
-    -   [getAll](#getall-3)
-        -   [Parameters](#parameters-31)
-    -   [create](#create-1)
-        -   [Parameters](#parameters-32)
-    -   [update](#update)
-        -   [Parameters](#parameters-33)
-    -   [focus](#focus-1)
-        -   [Parameters](#parameters-34)
-    -   [drawAttention](#drawattention)
-        -   [Parameters](#parameters-35)
--   [notifications](#notifications)
-    -   [create](#create-2)
-        -   [Parameters](#parameters-36)
-    -   [update](#update-1)
-        -   [Parameters](#parameters-37)
-    -   [clear](#clear-1)
-        -   [Parameters](#parameters-38)
-    -   [getAll](#getall-4)
+        -   [Parameters](#parameters-6)
+    -   [getAll](#getall-1)
+    -   [clear](#clear)
+        -   [Parameters](#parameters-7)
+    -   [clearAll](#clearall)
+-   [history](#history)
+    -   [search](#search)
+        -   [Parameters](#parameters-8)
+    -   [getVisits](#getvisits)
+        -   [Parameters](#parameters-9)
+    -   [addUrl](#addurl)
+        -   [Parameters](#parameters-10)
+    -   [deleteUrl](#deleteurl)
+        -   [Parameters](#parameters-11)
+    -   [deleteRange](#deleterange)
+        -   [Parameters](#parameters-12)
+    -   [deleteAll](#deleteall)
 -   [runtime](#runtime)
     -   [sendMessage](#sendmessage)
+        -   [Parameters](#parameters-13)
+-   [wallpaper](#wallpaper)
+    -   [set](#set)
+        -   [Parameters](#parameters-14)
+-   [windows](#windows)
+    -   [getById](#getbyid)
+        -   [Parameters](#parameters-15)
+    -   [getCurrent](#getcurrent)
+        -   [Parameters](#parameters-16)
+    -   [getLastFocused](#getlastfocused)
+        -   [Parameters](#parameters-17)
+    -   [getAll](#getall-2)
+        -   [Parameters](#parameters-18)
+    -   [create](#create-1)
+        -   [Parameters](#parameters-19)
+    -   [update](#update)
+        -   [Parameters](#parameters-20)
+    -   [focus](#focus)
+        -   [Parameters](#parameters-21)
+    -   [drawAttention](#drawattention)
+        -   [Parameters](#parameters-22)
+-   [tabs](#tabs)
+    -   [focus](#focus-1)
+        -   [Parameters](#parameters-23)
+    -   [close](#close)
+        -   [Parameters](#parameters-24)
+    -   [getActive](#getactive)
+    -   [executeOnActive](#executeonactive)
+        -   [Parameters](#parameters-25)
+    -   [open](#open)
+        -   [Parameters](#parameters-26)
+    -   [getAllActive](#getallactive)
+    -   [getAll](#getall-3)
+    -   [executeOnAll](#executeonall)
+        -   [Parameters](#parameters-27)
+    -   [executeOnAllActive](#executeonallactive)
+        -   [Parameters](#parameters-28)
+    -   [getCurrent](#getcurrent-1)
+    -   [reload](#reload)
+        -   [Parameters](#parameters-29)
+-   [message](#message)
+    -   [tab](#tab)
+        -   [Parameters](#parameters-30)
+    -   [allTabs](#alltabs)
+        -   [Parameters](#parameters-31)
+    -   [activeTabs](#activetabs)
+        -   [Parameters](#parameters-32)
+    -   [manyTabs](#manytabs)
+        -   [Parameters](#parameters-33)
+    -   [activeTab](#activetab)
+        -   [Parameters](#parameters-34)
+-   [notifications](#notifications)
+    -   [create](#create-2)
+        -   [Parameters](#parameters-35)
+    -   [update](#update-1)
+        -   [Parameters](#parameters-36)
+    -   [clear](#clear-1)
+        -   [Parameters](#parameters-37)
+    -   [getAll](#getall-4)
+-   [localStorage](#localstorage)
+    -   [set](#set-1)
+        -   [Parameters](#parameters-38)
+    -   [get](#get-2)
         -   [Parameters](#parameters-39)
 -   [cookie](#cookie)
     -   [get](#get-3)
@@ -143,21 +143,71 @@ Note: Many APIs are not supported in Edge. Check their documentation.
     -   [clear](#clear-2)
 -   [index](#index)
 
-### wallpaper
+### extension
 
-Manage wallpapers
+Enable, disable, and manage other browser extensions
 
-#### set
+#### self
 
--   **See: [WallpaperLayout enum from Chrome](https://developer.chrome.com/extensions/wallpaper#type-WallpaperLayout)**
+Get information about the calling extension
 
-CHROME ONLY. Sets wallpaper to an image (url) or Array buffer (data).
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ExtensionInfo>** Object with info about the extension
+
+#### permissionWarningsById
+
+Get a list of permission warnings for the given extension id
 
 ##### Parameters
 
--   `filename` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** File name of saved wallpaper
--   `layout` **WallpaperLayout** A WallpaperLayout Enum value
--   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional thumbnail, binary image source and url. See Chrome API docs for options(<https://developer.chrome.com/extensions/wallpaper>)
+-   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The browser-assigned id of the extension
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>>** Promised resolved with array of permission warnings or rejected with error
+
+#### permissionWarningsByManifest
+
+Get a list of permission warnings for the given extension manifest string
+
+##### Parameters
+
+-   `manifestStr` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Extension manifest JSON string.
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>>** Promised resolved with array of permission warnings or rejected with error
+
+#### enable
+
+Enable (activate) a browser extension
+
+##### Parameters
+
+-   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The browser-assigned id of the extension
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** Promise resolved with true if successful or rejected with error
+
+#### disable
+
+Disable (deactivate) a browser extension
+
+##### Parameters
+
+-   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The Browser-assigned id of the extension
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** Promise resolved with false if successful or rejected with error
+
+#### getAll
+
+Get all currently installed browser extension
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;ExtensionInfo>>** Promise resolved with array of browser extension information objects, or rejected with error
+
+#### get
+
+Get a browser by extension id
+
+##### Parameters
+
+-   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Browser-assigned extension id
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ExtensionInfo>** Promise resolved with browser extension information object or rejected with an error
 
 ### alarms
 
@@ -276,152 +326,137 @@ Deletes all items from the history.
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)>** Promise resolved with undefined or rejected with an error.
 
-### extension
+### runtime
 
-Enable, disable, and manage other browser extensions
+Manage runtime tasks like messaging extensions
 
-#### self
+#### sendMessage
 
-Get information about the calling extension
+-   **See: <https://developer.chrome.com/extensions/runtime#method-sendMessage>**
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ExtensionInfo>** Object with info about the extension
-
-#### permissionWarningsById
-
-Get a list of permission warnings for the given extension id
+Sends a message to an extension identified by its id
 
 ##### Parameters
 
--   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The browser-assigned id of the extension
+-   `extensionId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** optional extension id
+-   `msg` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Any JSON-ifiable object
+-   `options` **\[type]** options (optional, default `{}`)
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>>** Promised resolved with array of permission warnings or rejected with error
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with response from tab or rejected with an error
 
-#### permissionWarningsByManifest
+### wallpaper
 
-Get a list of permission warnings for the given extension manifest string
-
-##### Parameters
-
--   `manifestStr` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Extension manifest JSON string.
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>>** Promised resolved with array of permission warnings or rejected with error
-
-#### enable
-
-Enable (activate) a browser extension
-
-##### Parameters
-
--   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The browser-assigned id of the extension
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** Promise resolved with true if successful or rejected with error
-
-#### disable
-
-Disable (deactivate) a browser extension
-
-##### Parameters
-
--   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The Browser-assigned id of the extension
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** Promise resolved with false if successful or rejected with error
-
-#### getAll
-
-Get all currently installed browser extension
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;ExtensionInfo>>** Promise resolved with array of browser extension information objects, or rejected with error
-
-#### get
-
-Get a browser by extension id
-
-##### Parameters
-
--   `id` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Browser-assigned extension id
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ExtensionInfo>** Promise resolved with browser extension information object or rejected with an error
-
-### localStorage
-
-Manage the local storage of your browser extension
+Manage wallpapers
 
 #### set
 
-Set a value at a given key in the extension's local storage
+-   **See: [WallpaperLayout enum from Chrome](https://developer.chrome.com/extensions/wallpaper#type-WallpaperLayout)**
+
+CHROME ONLY. Sets wallpaper to an image (url) or Array buffer (data).
 
 ##### Parameters
 
--   `key` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Key for the set value
--   `value` **Any** Value to serialize to local storage. Objects and functions serialized to {}. Arrays, Regex, and primitives serialize correctly.
+-   `filename` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** File name of saved wallpaper
+-   `layout` **WallpaperLayout** A WallpaperLayout Enum value
+-   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional thumbnail, binary image source and url. See Chrome API docs for options(<https://developer.chrome.com/extensions/wallpaper>)
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)>** Promise resolved with nothing, or rejected with error
+### windows
 
-#### get
+Manage browser windows
 
-Get the value for a given key in local storage
+#### getById
 
-##### Parameters
+-   **See: [Chrome filter defaults](https://developer.chrome.com/extensions/windows#method-get) for this API**
+-   **See: [Firefox filter defaults](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/windows/get) for this API**
 
--   `key` **([String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)> | null)** Single key to get, array of keys to get, or null to get entire contents
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with object with key-value mappings or rejected with an error
-
-### message
-
-Send messages to tabs
-
-#### tab
-
-Send a message directly to tab by id
+Get a window by id
 
 ##### Parameters
 
--   `tabId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Browser-assigned id of target tab
--   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
+-   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window
+-   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
+-   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with response or rejected with error
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
 
-#### allTabs
+#### getCurrent
 
-Sends a message to all tabs in any window
-
-##### Parameters
-
--   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>>** Promise resolved with array of responses from tabs that were sent a message or rejected with an error
-
-#### activeTabs
-
-Sends a message to tabs that are considered 'active' (focused) for all open browser windows
+Get the current browser window
 
 ##### Parameters
 
--   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
+-   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
+-   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>>** Promise resolved with array of responses from tabs that were sent a message rejected with an error
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
 
-#### manyTabs
+#### getLastFocused
 
-Send a message to an array of tabs
-
-##### Parameters
-
--   `tabArr` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>** Array of Tab objects to send message to
--   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>>** Promise resolved with array of responses from messages or rejected with an error
-
-#### activeTab
-
-Send message to active (focused) tab in the current window.
+Get the most recently focused window. Usually the window 'on top'.
 
 ##### Parameters
 
--   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
+-   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
+-   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with response from tab or rejected with an error
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+
+#### getAll
+
+Get all open windows
+
+##### Parameters
+
+-   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
+-   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+
+#### create
+
+-   **See: [Full list of parameters](https://developer.chrome.com/extensions/windows#method-create)**
+
+Opens a new browser window with optional parameters.
+
+##### Parameters
+
+-   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Fully qualified url to open in new window
+-   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Optional parameters like incognito, focused, positioning, and tabid. See Chrome and Firefox docs for complete list.
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+
+#### update
+
+-   **See: [Full list of parameters](https://developer.chrome.com/extensions/windows#method-update)**
+
+Update a Window's state
+
+##### Parameters
+
+-   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to update
+-   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional parameters like height, width, and state.
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+
+#### focus
+
+Focus on a given window
+
+##### Parameters
+
+-   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to focus
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+
+#### drawAttention
+
+Draw attention to a given window
+
+##### Parameters
+
+-   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to focus
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
 
 ### tabs
 
@@ -526,103 +561,61 @@ Reloads a tab by id. Optionally bypasses cache.
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)>** Bypass
 
-### windows
+### message
 
-Manage browser windows
+Send messages to tabs
 
-#### getById
+#### tab
 
--   **See: [Chrome filter defaults](https://developer.chrome.com/extensions/windows#method-get) for this API**
--   **See: [Firefox filter defaults](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/windows/get) for this API**
-
-Get a window by id
+Send a message directly to tab by id
 
 ##### Parameters
 
--   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window
--   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
--   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
+-   `tabId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Browser-assigned id of target tab
+-   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with response or rejected with error
 
-#### getCurrent
+#### allTabs
 
-Get the current browser window
-
-##### Parameters
-
--   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
--   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
-
-#### getLastFocused
-
-Get the most recently focused window. Usually the window 'on top'.
+Sends a message to all tabs in any window
 
 ##### Parameters
 
--   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
--   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
+-   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>>** Promise resolved with array of responses from tabs that were sent a message or rejected with an error
 
-#### getAll
+#### activeTabs
 
-Get all open windows
-
-##### Parameters
-
--   `includeTabs` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Include array of window's associated Tab objects. Default false.
--   `filterWindowTypes` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;WindowTypes>?** Array to filter window by WindowType. Chrome and Firefox support different WindowTypes.
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
-
-#### create
-
--   **See: [Full list of parameters](https://developer.chrome.com/extensions/windows#method-create)**
-
-Opens a new browser window with optional parameters.
+Sends a message to tabs that are considered 'active' (focused) for all open browser windows
 
 ##### Parameters
 
--   `url` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Fully qualified url to open in new window
--   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Optional parameters like incognito, focused, positioning, and tabid. See Chrome and Firefox docs for complete list.
+-   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>>** Promise resolved with array of responses from tabs that were sent a message rejected with an error
 
-#### update
+#### manyTabs
 
--   **See: [Full list of parameters](https://developer.chrome.com/extensions/windows#method-update)**
-
-Update a Window's state
+Send a message to an array of tabs
 
 ##### Parameters
 
--   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to update
--   `params` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional parameters like height, width, and state.
+-   `tabArr` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Tab>** Array of Tab objects to send message to
+-   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>>** Promise resolved with array of responses from messages or rejected with an error
 
-#### focus
+#### activeTab
 
-Focus on a given window
-
-##### Parameters
-
--   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to focus
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
-
-#### drawAttention
-
-Draw attention to a given window
+Send message to active (focused) tab in the current window.
 
 ##### Parameters
 
--   `windowId` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Integer Id of window to focus
+-   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Any valid JSON-ifiable object
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Window](https://developer.mozilla.org/docs/Web/API/Window)>** Promise resolved with a Window object or rejected with an error.
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with response from tab or rejected with an error
 
 ### notifications
 
@@ -670,23 +663,30 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Get all notifications
 
-### runtime
+### localStorage
 
-Manage runtime tasks like messaging extensions
+Manage the local storage of your browser extension
 
-#### sendMessage
+#### set
 
--   **See: <https://developer.chrome.com/extensions/runtime#method-sendMessage>**
-
-Sends a message to an extension identified by its id
+Set a value at a given key in the extension's local storage
 
 ##### Parameters
 
--   `extensionId` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** optional extension id
--   `msg` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Any JSON-ifiable object
--   `options` **\[type]** options (optional, default `{}`)
+-   `key` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Key for the set value
+-   `value` **Any** Value to serialize to local storage. Objects and functions serialized to {}. Arrays, Regex, and primitives serialize correctly.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with response from tab or rejected with an error
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)>** Promise resolved with nothing, or rejected with error
+
+#### get
+
+Get the value for a given key in local storage
+
+##### Parameters
+
+-   `key` **([String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)> | null)** Single key to get, array of keys to get, or null to get entire contents
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** Promise resolved with object with key-value mappings or rejected with an error
 
 ### cookie
 

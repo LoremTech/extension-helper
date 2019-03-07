@@ -10,7 +10,7 @@ import PromiseFactory from '../utils';
  * @param {?Object} params           Optional thumbnail, binary image source and url. See Chrome API docs for options(https://developer.chrome.com/extensions/wallpaper)
  */
 function set(filename, layout, params) {
-  return PromiseFactory(chrome.wallpaper.setWallpaper, browser.wallpaper.setWallpaper, { filename, layout, ...params });
+  return PromiseFactory(chrome.wallpaper.setWallpaper.bind(chrome.wallpaper), browser.wallpaper.setWallpaper, { filename, layout, ...params });
 }
 
 export default {

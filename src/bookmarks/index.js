@@ -8,7 +8,7 @@ import PromiseFactory from '../utils';
  * @return {Promise<Array<BookmarkTreeNode>>} Promise resolved with an array of [BookMarkTreeNode](https://developer.chrome.com/extensions/bookmarks#type-BookmarkTreeNode) or rejected with an error.
  */
 function getById(idOrIdList) {
-  return PromiseFactory(chrome.bookmarks.get, browser.bookmarks.get, idOrIdList);
+  return PromiseFactory(chrome.bookmarks.get.bind(chrome.bookmarks), browser.bookmarks.get, idOrIdList);
 }
 
 /**
@@ -19,7 +19,7 @@ function getById(idOrIdList) {
  * @return {Promise<Array<BookMarkTreeNode>>}   Promise resolved with an array of BookmarkTreeNode or rejected with an error.
  */
 function getChildrenById(id) {
-  return PromiseFactory(chrome.bookmarks.getChildren, browser.bookmarks.getChildren, id);
+  return PromiseFactory(chrome.bookmarks.getChildren.bind(chrome.bookmarks), browser.bookmarks.getChildren, id);
 }
 
 // function getRecent() {

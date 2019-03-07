@@ -13,7 +13,7 @@ import PromiseFactory from '../utils';
  */
 function getById(windowId, includeTabs, filterWindowTypes) {
   const getInfo = { populate: includeTabs, windowTypes: filterWindowTypes };
-  return PromiseFactory(chrome.windows.get, browser.windows.get, windowId, getInfo);
+  return PromiseFactory(chrome.windows.get.bind(chrome.windows), browser.windows.get, windowId, getInfo);
 }
 
 /**
@@ -25,7 +25,7 @@ function getById(windowId, includeTabs, filterWindowTypes) {
  */
 function getCurrent(includeTabs, filterWindowTypes) {
   const getInfo = { populate: includeTabs, windowTypes: filterWindowTypes };
-  return PromiseFactory(chrome.windows.getCurrent, browser.windows.getCurrent, getInfo);
+  return PromiseFactory(chrome.windows.getCurrent.bind(chrome.windows), browser.windows.getCurrent, getInfo);
 }
 
 /**
@@ -37,7 +37,7 @@ function getCurrent(includeTabs, filterWindowTypes) {
  */
 function getLastFocused(includeTabs, filterWindowTypes) {
   const getInfo = { populate: includeTabs, windowTypes: filterWindowTypes };
-  return PromiseFactory(chrome.windows.getLastFocused, browser.windows.getLastFocused, getInfo);
+  return PromiseFactory(chrome.windows.getLastFocused.bind(chrome.windows), browser.windows.getLastFocused, getInfo);
 }
 
 /**
@@ -49,7 +49,7 @@ function getLastFocused(includeTabs, filterWindowTypes) {
  */
 function getAll(includeTabs, filterWindowTypes) {
   const getInfo = { populate: includeTabs, windowTypes: filterWindowTypes };
-  return PromiseFactory(chrome.windows.getAll, browser.windows.getAll, getInfo);
+  return PromiseFactory(chrome.windows.getAll.bind(chrome.windows), browser.windows.getAll, getInfo);
 }
 
 /**
@@ -61,7 +61,7 @@ function getAll(includeTabs, filterWindowTypes) {
  * @return {Promise<Window>}        Promise resolved with a Window object or rejected with an error.
  */
 function create(url, params) {
-  return PromiseFactory(chrome.windows.create, browser.windows.create, { url, ...params });
+  return PromiseFactory(chrome.windows.create.bind(chrome.windows), browser.windows.create, { url, ...params });
 }
 
 /**
@@ -73,7 +73,7 @@ function create(url, params) {
  * @return {Promise<Window>}  Promise resolved with a Window object or rejected with an error.
  */
 function update(windowId, params) {
-  return PromiseFactory(chrome.windows.update, browser.windows.update, { ...params });
+  return PromiseFactory(chrome.windows.update.bind(chrome.windows), browser.windows.update, { ...params });
 }
 
 /**

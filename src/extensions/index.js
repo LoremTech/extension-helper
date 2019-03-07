@@ -7,7 +7,7 @@ import PromiseFactory from '../utils';
  * @return {Promise<ExtensionInfo>} Object with info about the extension
  */
 function self() {
-  return PromiseFactory(chrome.management.getSelf, browser.management.getSelf);
+  return PromiseFactory(chrome.management.getSelf.bind(chrome.management), browser.management.getSelf);
 }
 
 /**
@@ -17,7 +17,7 @@ function self() {
  * @return {Promise<Array<String>>}    Promised resolved with array of permission warnings or rejected with error
  */
 function permissionWarningsById(id) {
-  return PromiseFactory(chrome.management.getPermissionWarningsById, browser.management.getPermissionWarningsById, id);
+  return PromiseFactory(chrome.management.getPermissionWarningsById.bind(chrome.management), browser.management.getPermissionWarningsById, id);
 }
 
 /**
@@ -27,7 +27,7 @@ function permissionWarningsById(id) {
  * @return {Promise<Array<String>>}     Promised resolved with array of permission warnings or rejected with error
  */
 function permissionWarningsByManifest(manifestStr) {
-  return PromiseFactory(chrome.management.getPermissionWarningsByManifest, browser.management.getPermissionWarningsByManifest, manifestStr);
+  return PromiseFactory(chrome.management.getPermissionWarningsByManifest.bind(chrome.management), browser.management.getPermissionWarningsByManifest, manifestStr);
 }
 
 /**
@@ -37,7 +37,7 @@ function permissionWarningsByManifest(manifestStr) {
  * @return {Promise<Boolean>} Promise resolved with true if successful or rejected with error
  */
 function enable(id) {
-  return PromiseFactory(chrome.management.setEnabled, browser.management.setEnabled, id, true);
+  return PromiseFactory(chrome.management.setEnabled.bind(chrome.management), browser.management.setEnabled, id, true);
 }
 
 /**
@@ -47,7 +47,7 @@ function enable(id) {
  * @return {Promise<Boolean>} Promise resolved with false if successful or rejected with error
  */
 function disable(id) {
-  return PromiseFactory(chrome.management.setEnabled, browser.management.setEnabled, id, false);
+  return PromiseFactory(chrome.management.setEnabled.bind(chrome.management), browser.management.setEnabled, id, false);
 }
 
 /**
@@ -56,7 +56,7 @@ function disable(id) {
  * @return {Promise<Array<ExtensionInfo>>} Promise resolved with array of browser extension information objects, or rejected with error
  */
 function getAll() {
-  return PromiseFactory(chrome.management.getAll, browser.management.getAll);
+  return PromiseFactory(chrome.management.getAll.bind(chrome.management), browser.management.getAll);
 }
 
 /**
@@ -66,7 +66,7 @@ function getAll() {
  * @return {Promise<ExtensionInfo>} Promise resolved with browser extension information object or rejected with an error
  */
 function get(id) {
-  return PromiseFactory(chrome.management.get, browser.management.get, id);
+  return PromiseFactory(chrome.management.get.bind(chrome.management), browser.management.get, id);
 }
 
 export default {

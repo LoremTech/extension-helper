@@ -12,7 +12,7 @@ import PromiseFactory from '../utils';
  */
 function search(text, optionalStartTime, optionalEndTime, optionalMaxResults) {
   const queryObj = { text, startTime: optionalStartTime, endTime: optionalEndTime, maxResults: optionalMaxResults };
-  return PromiseFactory(chrome.history.search, browser.history.search, queryObj);
+  return PromiseFactory(chrome.history.search.bind(chrome.history), browser.history.search, queryObj);
 }
 
 /**
@@ -22,7 +22,7 @@ function search(text, optionalStartTime, optionalEndTime, optionalMaxResults) {
  * @return {Promise<Array<VisitItem>>}  Promise that resolves with array of VisitItems or rejects with an error
  */
 function getVisits(url) {
-  return PromiseFactory(chrome.history.getVisits, browser.history.getVisits, { url });
+  return PromiseFactory(chrome.history.getVisits.bind(chrome.history), browser.history.getVisits, { url });
 }
 
 /**
@@ -34,7 +34,7 @@ function getVisits(url) {
  * @return {Promise<undefined>}        Promise resolved with undefined or rejected with an error.
  */
 function addUrl(url, optionalParams) {
-  return PromiseFactory(chrome.history.addUrl, browser.history.addUrl, { url, ...optionalParams });
+  return PromiseFactory(chrome.history.addUrl.bind(chrome.history), browser.history.addUrl, { url, ...optionalParams });
 }
 
 /**
@@ -44,7 +44,7 @@ function addUrl(url, optionalParams) {
  * @return {Promise<undefined>}     Promise resolved with undefined or rejected with an error;
  */
 function deleteUrl(url) {
-  return PromiseFactory(chrome.history.deleteUrl, browser.history.deleteUrl, { url });
+  return PromiseFactory(chrome.history.deleteUrl.bind(chrome.history), browser.history.deleteUrl, { url });
 }
 
 /**
@@ -66,7 +66,7 @@ function deleteRange(startTime, endTime) {
   // Must sanitize for Chrome because only Number (double) are supported but Firefox accepts String and Date objects as well.
   const sanitizedStart = sanitizeDate(startTime);
   const sanitizedEnd = sanitizeDate(endTime);
-  return PromiseFactory(chrome.history.deleteRange, browser.history.deleteRange, { startTime: sanitizedStart, endTime: sanitizedEnd });
+  return PromiseFactory(chrome.history.deleteRange.bind(chrome.history), browser.history.deleteRange, { startTime: sanitizedStart, endTime: sanitizedEnd });
 }
 
 /**
@@ -75,7 +75,7 @@ function deleteRange(startTime, endTime) {
  * @return {Promise<undefined>} Promise resolved with undefined or rejected with an error.
  */
 function deleteAll() {
-  return PromiseFactory(chrome.history.deleteAll, browser.history.deleteAll);
+  return PromiseFactory(chrome.history.deleteAll.bind(chrome.history), browser.history.deleteAll);
 }
 
 export default {

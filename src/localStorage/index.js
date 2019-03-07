@@ -9,7 +9,7 @@ import PromiseFactory from '../utils';
  * @return {Promise<undefined>} Promise resolved with nothing, or rejected with error
  */
 function set(key, value) {
-  return PromiseFactory(chrome.storage.local.set, browser.storage.local.set, { [key]: value });
+  return PromiseFactory(chrome.storage.local.set.bind(chrome.storage.local), browser.storage.local.set, { [key]: value });
 }
 
 /**
@@ -19,7 +19,7 @@ function set(key, value) {
  * @return {Promise<Object>}     Promise resolved with object with key-value mappings or rejected with an error
  */
 function get(key) {
-  return PromiseFactory(chrome.storage.local.get, browser.storage.local.get, key);
+  return PromiseFactory(chrome.storage.local.get.bind(chrome.storage.local), browser.storage.local.get, key);
 }
 
 export default {

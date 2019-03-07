@@ -10,7 +10,7 @@ import PromiseFactory from '../utils';
  * @return {Promise<undefined>}     Promise resolved with undefined or rejected with an error.
  */
 function create(name, optionalParams) {
-  return PromiseFactory(chrome.alarms.create, browser.alarms.create, name, { ...optionalParams });
+  return PromiseFactory(chrome.alarms.create.bind(chrome.alarms), browser.alarms.create, name, { ...optionalParams });
 }
 
 /**
@@ -20,7 +20,7 @@ function create(name, optionalParams) {
  * @return {Promise<Alarm>}      A Promise resolved with an Alarm object or rejected with an error. If resolved, value represents the alarm whose name matches name. If no alarms match, this will be undefined.
  */
 function get(name) {
-  return PromiseFactory(chrome.alarms.get, browser.alarms.get, name);
+  return PromiseFactory(chrome.alarms.get.bind(chrome.alarms), browser.alarms.get, name);
 }
 
 /**
@@ -29,7 +29,7 @@ function get(name) {
  * @return {Promise<Array<Alarm>>} Promise resolved with an array of Alarm objects or rejected with an error. Resolves with empty array if no alarms are active.
  */
 function getAll() {
-  return PromiseFactory(chrome.alarms.getAll, browser.alarms.getAll);
+  return PromiseFactory(chrome.alarms.getAll.bind(chrome.alarms), browser.alarms.getAll);
 }
 
 /**
@@ -39,7 +39,7 @@ function getAll() {
  * @return {Promise<Boolean>}      Promise resolved with true if alarm was cleared or false if not cleared, or rejected with an error.
  */
 function clear(name) {
-  return PromiseFactory(chrome.alarms.clear, browser.alarms.clear, name);
+  return PromiseFactory(chrome.alarms.clear.bind(chrome.alarms), browser.alarms.clear, name);
 }
 
 /**
@@ -49,7 +49,7 @@ function clear(name) {
  * @return {Promise<Boolean>} Promise resolved with true if any alarms were cleared or false otherwise. Or, rejected with an error.
  */
 function clearAll() {
-  return PromiseFactory(chrome.alarms.clearAll, browser.alarms.clearAll);
+  return PromiseFactory(chrome.alarms.clearAll.bind(chrome.alarms), browser.alarms.clearAll);
 }
 
 export default {

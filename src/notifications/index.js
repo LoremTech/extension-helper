@@ -10,7 +10,7 @@ import PromiseFactory from '../utils';
  * @return {Prromise<String>}       id of created notification
  */
 function create(notificationId, options) {
-  return PromiseFactory(chrome.notifications.create, browser.notifications.create, notificationId, options);
+  return PromiseFactory(chrome.notifications.create.bind(chrome.notifications), browser.notifications.create, notificationId, options);
 }
 
 /**
@@ -22,7 +22,7 @@ function create(notificationId, options) {
  * @return {Promise<Boolean>}      Boolean wasUpdated indicating whether notification was updated
  */
 function update(notificationId, options) {
-  return PromiseFactory(chrome.notifications.update, browser.notifications.update, notificationId, options);
+  return PromiseFactory(chrome.notifications.update.bind(chrome.notifications), browser.notifications.update, notificationId, options);
 }
 
 /**
@@ -33,7 +33,7 @@ function update(notificationId, options) {
  * @return {Promise<Boolean>}      Boolean wasCleared specifying whether the matching notification existed
  */
 function clear(notificationId) {
-  return PromiseFactory(chrome.notifications.clear, browser.notifications.clear);
+  return PromiseFactory(chrome.notifications.clear.bind(chrome.notifications), browser.notifications.clear);
 }
 
 /**
@@ -42,7 +42,7 @@ function clear(notificationId) {
  * @return {Promise<Object>>} Promise resolved with an object containing notification ids in the system or rejected with an error.
  */
 function getAll() {
-  return PromiseFactory(chrome.notifications.getAll, browser.notifications.getAll);
+  return PromiseFactory(chrome.notifications.getAll.bind(chrome.notifications), browser.notifications.getAll);
 }
 
 /**
@@ -51,7 +51,7 @@ function getAll() {
  */
 // Not yet supported in FF
 // function getPermissionLevel() {
-//   return PromiseFactory(chrome.notifications.getAll, browser.notifications.getAll);
+//   return PromiseFactory(chrome.notifications.getPermissionLevel.bind(chrome.notifications), browser.notifications.getPermissionLevel);
 // }
 
 export default {

@@ -67,7 +67,7 @@ function activeTab(message) {
  * @return {Promise<Object>} Promise resolved with response from tab or rejected with an error
  */
 function sendMessage(tabId, message) {
-  return PromiseFactory(chrome.tabs.sendMessage, browser.tabs.sendMessage, tabId, message);
+  return PromiseFactory(chrome.tabs.sendMessage.bind(chrome.tabs), browser.tabs.sendMessage, tabId, message);
 }
 
 export default {

@@ -11,7 +11,7 @@ import PromiseFactory from '../utils';
  * @return {Promise<Cookie>}        Promise resolved with Cookie object or rejected with error
  */
 function get(url, name, storeId) {
-  return PromiseFactory(chrome.cookies.get, browser.cookies.get, { url, name, storeId });
+  return PromiseFactory(chrome.cookies.get.bind(chrome.cookies), browser.cookies.get, { url, name, storeId });
 }
 
 /**
@@ -26,7 +26,7 @@ function get(url, name, storeId) {
  */
 function set(url, name, value, optionalParamsObj) {
   const params = { url, name, value, ...optionalParamsObj };
-  return PromiseFactory(chrome.cookies.set, browser.cookies.set, params);
+  return PromiseFactory(chrome.cookies.set.bind(chrome.cookies), browser.cookies.set, params);
 }
 
 /**
@@ -39,7 +39,7 @@ function set(url, name, value, optionalParamsObj) {
  */
 function getAll(url, name, optionalParamsObj) {
   const params = { url, name, ...optionalParamsObj };
-  return PromiseFactory(chrome.getAll, browser.getAll, params);
+  return PromiseFactory(chrome.cookies.getAll.bind(chrome.cookies), browser.cookies.getAll, params);
 }
 
 /**
@@ -52,7 +52,7 @@ function getAll(url, name, optionalParamsObj) {
  */
 function remove(url, name, storeId) {
   const params = { url, name, storeId: storeId };
-  return PromiseFactory(chrome.cookies.remove, browser.cookies.remove, params);
+  return PromiseFactory(chrome.cookies.remove.bind(chrome.cookies), browser.cookies.remove, params);
 }
 
 /**
@@ -61,7 +61,7 @@ function remove(url, name, storeId) {
  * @return {Promise<Array<CookieStore>>} Promise resolved with an array of CookieStore objects or rejected with an error.
  */
 function getAllCookieStores() {
-  return PromiseFactory(chrome.cookies.getAllCookieStores, browser.cookies.getAllCookieStores);
+  return PromiseFactory(chrome.cookies.getAllCookieStores.bind(chrome.cookies), browser.cookies.getAllCookieStores);
 }
 
 export default {

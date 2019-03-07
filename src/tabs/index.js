@@ -8,7 +8,7 @@ import PromiseFactory from '../utils';
  * @returns {Promise<Object>} resolved with tabDetails object or rejected with error
  */
 function focus(tabId) {
-  return PromiseFactory(chrome.tabs.update, browser.tabs.update, tabId, { active: true });
+  return PromiseFactory(chrome.tabs.update.bind(chrome.tabs), browser.tabs.update, tabId, { active: true });
 }
 
 /**
@@ -18,7 +18,7 @@ function focus(tabId) {
  * @return {Promise<undefined>} Promise resolved with undefined or rejected with error
  */
 function close(tabIds) {
-  return PromiseFactory(chrome.tabs.remove, browser.tabs.remove, tabIds);
+  return PromiseFactory(chrome.tabs.remove.bind(chrome.tabs), browser.tabs.remove, tabIds);
 }
 
 /**
@@ -27,7 +27,7 @@ function close(tabIds) {
  * @return {Promise<Object>} tab object
  */
 function getActive() {
-  return PromiseFactory(chrome.tabs.query, browser.tabs.query, { active: true, currentWindow: true })
+  return PromiseFactory(chrome.tabs.query.bind(chrome.tabs), browser.tabs.query, { active: true, currentWindow: true })
     .then(tabs => {
       const [tab] = tabs;
       return tab;
@@ -56,7 +56,7 @@ function executeOnActive(toInject, typeToInject) {
  * @return {Promise<Object>} resolved with the newly opened tab or rejected with error
  */
 function open(url, active) {
-  return PromiseFactory(chrome.tabs.create, browser.tabs.create, { url, active });
+  return PromiseFactory(chrome.tabs.create.bind(chrome.tabs), browser.tabs.create, { url, active });
 }
 
 /**
@@ -65,7 +65,7 @@ function open(url, active) {
  * @return {Promise<Array<Object>>} Promise resolved with an array of all active tab objects or rejected with an error
  */
 function getAllActive() {
-  return PromiseFactory(chrome.tabs.query, browser.tabs.query, { active: true });
+  return PromiseFactory(chrome.tabs.query.bind(chrome.tabs), browser.tabs.query, { active: true });
 }
 
 /**
@@ -74,7 +74,7 @@ function getAllActive() {
  * @return {Promise<Array<Object>>} Promise resolved with all tabs or rejected with an error
  */
 function getAll() {
-  return PromiseFactory(chrome.tabs.query, browser.tabs.query, {});
+  return PromiseFactory(chrome.tabs.query.bind(chrome.tabs), browser.tabs.query, {});
 }
 
 /**
@@ -119,7 +119,7 @@ function executeOnAllActive(toInject, typeToInject) {
  * @return {Promise<Tab>} Promise that resolves with Tab or rejects with error
  */
 function getCurrent() {
-  return PromiseFactory(chrome.tabs.getCurrent, browser.tabs.getCurrent)
+  return PromiseFactory(chrome.tabs.getCurrent.bind(chrome.tabs), browser.tabs.getCurrent)
 }
 
 /**
@@ -130,7 +130,7 @@ function getCurrent() {
  * @return {Promise<undefined>}  Bypass
  */
 function reload(tabId, bypassCache) {
-  return PromiseFactory(chrome.tabs.reload, browser.tabs.reload, { bypassCache });
+  return PromiseFactory(chrome.tabs.reload.bind(chrome.tabs), browser.tabs.reload, { bypassCache });
 }
 
 /**
@@ -144,7 +144,7 @@ function reload(tabId, bypassCache) {
  */
 function executeScript(tabId, toInject, typeToInject) {
   const executionObj = { [typeToInject]: toInject };
-  return PromiseFactory(chrome.tabs.executeScript, browser.tabs.executeScript, tabId, executionObj);
+  return PromiseFactory(chrome.tabs.executeScript.bind(chrome.tabs), browser.tabs.executeScript, tabId, executionObj);
 }
 
 export default {

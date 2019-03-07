@@ -11,7 +11,7 @@ import PromiseFactory from '../utils';
  * @return {Promise<Object>}    Promise resolved with response from tab or rejected with an error
  */
 function sendMessage(extensionId, msg, options = {}) {
-  return PromiseFactory(chrome.runtime.sendMessage, browser.runtime.sendMessage, extensionId, msg, options);
+  return PromiseFactory(chrome.runtime.sendMessage.bind(chrome.runtime), browser.runtime.sendMessage, extensionId, msg, options);
 }
 
 export default {
